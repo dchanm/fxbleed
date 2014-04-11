@@ -16,7 +16,7 @@ self.port.on("siteStatus", function(status) {
     statusP.textContent = "not vulnerable";
     statusP.className = "notVulnerable";
   } else {
-    statusP.textContent = "unknown";
+    statusP.innerHTML = '<img src="progress.gif" />';
     statusP.className = "unknown";
   }
 
