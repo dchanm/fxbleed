@@ -1,9 +1,29 @@
-div#status .vulnerable {
-  background-color:red;
-  color:white;
+/* CSS reset */
+* {
+  margin:0;
+  padding:0;
+  background-color:white;
 }
 
-div#status .notVulnerable {
-  background-color:green;
-  color:black;
+div#header {
+  text-align:center;
+}
+
+div#header p {
+  padding:4px 8px;
+}
+
+.vulnerable {
+  background-color:#ED5555;
+  color:#eee;
+}
+
+.notVulnerable {
+  background-color:#6CED55;
+  color:#333;
+}
+
+.unknown {
+  background-color:white;
+  color: black;
 }

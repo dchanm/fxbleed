@@ -7,15 +7,19 @@ document.querySelector('input#addonEnabled').addEventListener('change', function
 });
 
 self.port.on("siteStatus", function(status) {
-  var statusSpan = document.querySelector('div#header span#status');
+  //var headerDiv = document.querySelector('div#header');
+  var statusP = document.querySelector('div#header p#status');
   if (status.vulnerable === true) {
-    statusSpan.textContent = "vulnerable";
+    statusP.textContent = "vulnerable";
+    statusP.className = "vulnerable";
   } else if (status.vulnerable === false) {
-    statusSpan.textContent = "not vulnerable";
+    statusP.textContent = "not vulnerable";
+    statusP.className = "notVulnerable";
   } else {
-    statusSpan.textContent = "unknown";
+    statusP.textContent = "unknown";
+    statusP.className = "unknown";
   }
 
-  var hostSpan = document.querySelector('div#header span#host');
-  hostSpan.textContent = status.host;
+  var hostP = document.querySelector('div#header p#host');
+  hostP.textContent = status.host;
 });
