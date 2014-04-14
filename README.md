@@ -56,3 +56,34 @@ Rather than block all secure requests until we can determine their
 vulnerability status, we clear cookies on all secure requests and let the user
 choose what to do next based on the panel once it updates.
 
+## When should you change your password?
+
+1. A site was vulnerable to Heartbleed
+2. It's been patched.
+
+   If you reset your password before the site is patched, it
+   can be compromised by active attackers using Heartbleed.
+
+3. Their SSL keys have been rotated, and their certificates revoked.
+
+   If their private keys were stolen using Heartbleed, then:
+
+   1. Any communication to the site can be decrypted until the
+      keys and certificates are rotated.
+   2. The site can be impersonated by an attacker until the certificate is
+      revoked, so you could be giving your new credentials to an impostor.
+
+How do we make a decision for each of these cases?
+
+1. Use the [masstest lists][].
+2. Check if the site is currently vulnerable:
+    a. Use an external [check server][].
+    b. Use dchan's [non-intrusive fingerprint][].
+3. Compare current fingerprint and issue date with data from SSL Observatory (?)
+    a. problem: that's an enormous amount of data, and I'm not sure if it's
+    recent enough (link of the site says it's from August 2010).
+
+[masstest lists]: https://github.com/musalbas/heartbleed-masstest#630-of-the-top-10000-sites-appeared-vulnerable-on-april-8-1600-utc
+[check server]: http://filippo.io/Heartbleed/
+[non-intrusive fingerprint]: https://blog.mozilla.org/security/2014/04/12/testing-for-heartbleed-vulnerability-without-exploiting-the-server/
+>>>>>>> notes on password change decision logic
