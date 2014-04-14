@@ -1,7 +1,7 @@
 Based off Jamie Hoyle's ChromeBleed extension
 https://chrome.google.com/webstore/detail/chromebleed/eeoekjnjgppnaegdjbcafdggilajhpic
 
-The extension uses Filippo Valsorda's API endpoint from
+The extension originally used Filippo Valsorda's API endpoint from
 http://filippo.io/Heartbleed/
 
 ## FAQ
@@ -12,7 +12,7 @@ The add-on is disabled by default and can be toggled by clicking the icon in the
 
 ### How does the add-on work?
 
-When you visit a HTTPS site, the add-on will send a request to Filippo Valsorda's API endpoint. The hostname + port (if applicable) are sent. The result is then cached in a JS object. Future visits to the same hostname + port will result in the cached value being returned. Exiting Firefox clears this cache 
+When you visit a HTTPS page, the add-on will connect to the server and attempt to perform a TLS handshake followed by a HeartBeat request. A server which replies with a HeartBeat response is vulnerable assuming it uses OpenSSL.
 
 ### What happens when I visit a vulnerable site?
 
