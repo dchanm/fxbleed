@@ -32,3 +32,9 @@ A Firefox notification is generated and displayed on your desktop informing you 
 ### What information does the add-on store?
 
 The add-on stores a preferences and a cache of the status of visited sites.
+
+### What happens if I'm using Private Browsing?
+
+The addon ignores all requests made in Private Browsing windows. Note that as
+a result, you will not receive notifications if you visit vulnerable sites in
+a private browsing window.
