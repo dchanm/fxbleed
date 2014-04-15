@@ -4,6 +4,15 @@ https://chrome.google.com/webstore/detail/chromebleed/eeoekjnjgppnaegdjbcafdggil
 The extension uses a Mozilla-operated instance of Filippo Valsora's endpoint
 from http://filippo.io/Heartbleed/
 
+## Try it out
+
+1. Visit https://encrypted.google.com. It is not vulnerable to Heartbleed, so
+   you will not see a notification. If you open the Heartbleed panel, you will
+   see a green label that says it is not vulnerable.
+2. Visit https://cloudflarechallenge.com. This site is (intentionally)
+   vulnerable to Heartbleed. You will see a notification that the site you're
+   on is vulnerable, and the panel will display a red warning label.
+
 ## FAQ
 
 ### How do I can I enable / disable the add-on?
