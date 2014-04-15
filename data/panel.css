@@ -37,6 +37,11 @@ div#header p {
   color: black;
 }
 
+.error {
+  background-color:yellow;
+  color: black;
+}
+
 div#settings {
   padding:8px;
 }

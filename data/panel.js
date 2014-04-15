@@ -15,15 +15,20 @@ self.port.on("siteStatus", function(status) {
   }
 
   var statusP = document.querySelector('div#header p#status');
-  if (status.vulnerable === true) {
-    statusP.textContent = "Vulnerable!";
-    headerDiv.className = "vulnerable";
-  } else if (status.vulnerable === false) {
-    statusP.textContent = "Not vulnerable";
-    headerDiv.className = "notVulnerable";
-  } else {
+  if (status.response === undefined) {
     statusP.innerHTML = '<img src="progress.gif" />';
     headerDiv.className = "unknown";
+  } else if (status.response.vulnerable === true) {
+    statusP.textContent = "Vulnerable!";
+    headerDiv.className = "vulnerable";
+  } else if (status.response.vulnerable === false) {
+    if (status.response.response.code === 2) {
+      statusP.textContent = "An error occurred";
+      headerDiv.className = 'error';
+    } else {
+      statusP.textContent = "Not vulnerable";
+      headerDiv.className = "notVulnerable";
+    }
   }
 
   var hostP = document.querySelector('div#header p#host');
