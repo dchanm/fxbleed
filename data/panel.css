@@ -2,11 +2,20 @@
 * {
   margin:0;
   padding:0;
-  background-color:white;
+}
+
+body {
+  font: 16px Arial, sans-serif;
+  background-color:#ddd;;
 }
 
 div#header {
   text-align:center;
+  padding-bottom:4px;
+}
+
+.hidden {
+  display:none;
 }
 
 div#header p {
@@ -26,4 +35,18 @@ div#header p {
 .unknown {
   background-color:white;
   color: black;
+}
+
+div#settings {
+  padding:8px;
+}
+
+div#settings h1 {
+  text-align:center;
+  font-size:11px;
+  margin-bottom:8px;
+}
+
+div#settings label {
+  font: 13px Arial,sans-serif;
 }

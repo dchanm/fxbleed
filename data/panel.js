@@ -7,17 +7,23 @@ document.querySelector('input#addonEnabled').addEventListener('change', function
 });
 
 self.port.on("siteStatus", function(status) {
-  //var headerDiv = document.querySelector('div#header');
+  // Header div is hidden to start, since there's nothing to show until the
+  // user navigates to a page. Show it now.
+  var headerDiv = document.querySelector('div#header');
+  if (headerDiv.className === "hidden" ) {
+    headerDiv.className = "";
+  }
+
   var statusP = document.querySelector('div#header p#status');
   if (status.vulnerable === true) {
-    statusP.textContent = "vulnerable";
-    statusP.className = "vulnerable";
+    statusP.textContent = "Vulnerable!";
+    headerDiv.className = "vulnerable";
   } else if (status.vulnerable === false) {
-    statusP.textContent = "not vulnerable";
-    statusP.className = "notVulnerable";
+    statusP.textContent = "Not vulnerable";
+    headerDiv.className = "notVulnerable";
   } else {
     statusP.innerHTML = '<img src="progress.gif" />';
-    statusP.className = "unknown";
+    headerDiv.className = "unknown";
   }
 
   var hostP = document.querySelector('div#header p#host');
