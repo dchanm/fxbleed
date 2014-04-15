@@ -38,3 +38,21 @@ The add-on stores a preferences and a cache of the status of visited sites.
 The addon ignores all requests made in Private Browsing windows. Note that as
 a result, you will not receive notifications if you visit vulnerable sites in
 a private browsing window.
+
+### What is "automatically clear cookies"?
+
+A vulnerable site can leak the contents of memory to attackers, including
+credentials (username, password) during login as well as the session cookies
+of a logged-in user, which can be used to impersonate them. If you are
+concerned about this information being leaked, checking this box will
+automatically clear cookies on requests made to secure sites. Note that this
+will automatically cause you to be "logged out" of such sites, and you will
+need to login again. You should check the panel before doing so to make sure
+that the site is not vulnerable to Heartbleed. This, by the way, is a great
+opportunity to reset your password if you haven't already!
+
+This feature is off by default because it interferes with normal browsing.
+Rather than block all secure requests until we can determine their
+vulnerability status, we clear cookies on all secure requests and let the user
+choose what to do next based on the panel once it updates.
+
