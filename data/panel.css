@@ -22,6 +22,10 @@ div#header p {
   padding:4px 8px;
 }
 
+div#header p.small {
+  font-size:10px;
+}
+
 .vulnerable {
   background-color:#ED5555;
   color:#eee;

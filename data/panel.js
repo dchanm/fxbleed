@@ -23,7 +23,7 @@ self.port.on("siteStatus", function(status) {
     statusP.innerHTML = '<img src="progress.gif" />';
     headerDiv.className = "unknown";
   } else if (status.response.error === true) {
-    statusP.textContent = "An error occurred";
+    statusP.innerHTML = '<p>An error occurred.</p><p class="small">This does not mean the site is vulnerable. For more information, <a target="_blank" href="https://filippo.io/Heartbleed/faq.html#wentwrong">click here</a></p>';
     headerDiv.className = 'error';
   } else {
     if (status.response.vulnerable === true) {
