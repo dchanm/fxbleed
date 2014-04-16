@@ -10,7 +10,11 @@ self.port.on("siteStatus", function(status) {
   // Header div is hidden to start, since there's nothing to show until the
   // user navigates to a page. Show it now.
   var headerDiv = document.querySelector('div#header');
-  if (headerDiv.className === "hidden" ) {
+  if (status.response === null) {
+    // The active tab is not relevant to Heartbleed. Hide the status div.
+    headerDiv.className = "hidden";
+    return;
+  } else {
     headerDiv.className = "";
   }
 
