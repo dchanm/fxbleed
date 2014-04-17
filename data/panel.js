@@ -4,8 +4,8 @@ document.querySelector('input#autoClearCookies').addEventListener('change', func
 });
 */
 
-document.querySelector('input#addonEnabled').addEventListener('change', function() {
-  self.port.emit("changeSettings", { name: "addonEnabled", value: this.checked });
+document.querySelector('input#notificationsEnabled').addEventListener('change', function() {
+  self.port.emit("changeSettings", { name: "notificationsEnabled", value: this.checked });
 });
 
 self.port.on("siteStatus", function(status) {
