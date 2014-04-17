@@ -9,9 +9,16 @@ body {
   background-color:#ddd;;
 }
 
+.center { text-align: center; }
+img.center, button.center { display: block; margin: 0 auto; }
+
 div#header {
   text-align:center;
   padding-bottom:4px;
+}
+
+div#historyScan {
+  margin-top: 8px;
 }
 
 .hidden {

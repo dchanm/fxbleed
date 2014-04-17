@@ -8,6 +8,10 @@ document.querySelector('input#notificationsEnabled').addEventListener('change', 
   self.port.emit("changeSettings", { name: "notificationsEnabled", value: this.checked });
 });
 
+document.querySelector('button#startHistoryScan').addEventListener('click', function() {
+  self.port.emit("startHistoryScan", {});
+});
+
 self.port.on("siteStatus", function(status) {
   // Header div is hidden to start, since there's nothing to show until the
   // user navigates to a page. Show it now.
