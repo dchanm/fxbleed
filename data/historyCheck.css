@@ -42,3 +42,18 @@ img#heartbleed-logo {
 img#example-popup {
   margin-bottom:1.4em;
 }
+
+.vulnerable {
+  background-color:#ED5555;
+  color:#eee;
+}
+
+.notVulnerable {
+  background-color:#6CED55;
+  color:#333;
+}
+
+.error {
+  background-color:yellow;
+  color: black;
+}
