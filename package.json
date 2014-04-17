@@ -3,7 +3,7 @@
   "title": "Heartbleed Monitor",
   "id": "jid1-eMhaOaq3SPBFDg",
   "description": "A Firefox add-on to notify you when you visit a webpage vulnerable to Heartbleed",
-  "author": "David Chan <dchan@mozilla.com>",
+  "author": "David Chan <dchan@mozilla.com> and Garrett Robinson <grobinson@mozilla.com>",
   "license": "MPL 2.0",
   "version": "0.2",
   "preferences": [{
