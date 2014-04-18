@@ -8,7 +8,7 @@ self.port.on("checkResult", function(result) {
   // document)? Potential attack: try to go to <script>doBadStuff()</script>,
   // then open the history scan.
   // TODO: basic templating, should build these from an object
-  resultLi.innerHTML = '<a href="' + result.domain + '">' + result.domain + '</a>';
+  resultLi.innerHTML = '<a href="https://' + result.domain + '">' + result.domain + '</a>';
   switch(result.code) {
     case 0:
       resultLi.className = 'vulnerable';
