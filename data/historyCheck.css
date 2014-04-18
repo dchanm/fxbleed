@@ -66,9 +66,21 @@ ol#results li {
   color:#333;
 }
 
+.wasVulnerable {
+  border:1px solid #777;
+}
+
 .error {
   background-color:yellow;
 }
 .error a {
   color: black;
+}
+
+span.explanation {
+  font-size:12px;
+  /* Is this the best way to do this? */
+  display:block;
+  float:right;
+  clear:both;
 }
