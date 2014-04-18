@@ -23,3 +23,14 @@ self.port.on("checkResult", function(result) {
   var resultsList = document.querySelector('ol#results');
   resultsList.appendChild(resultLi);
 });
+
+self.port.on("scanFinished", function () {
+  var progressIndicator = document.querySelector("img#progress");
+  progressIndicator.parentNode.removeChild(progressIndicator);
+
+  var finishedP = document.createElement("p");
+  finishedP.textContent = "Done!";
+  finishedP.className = "center";
+  var infoDiv = document.querySelector("div#info");
+  infoDiv.appendChild(finishedP);
+});
