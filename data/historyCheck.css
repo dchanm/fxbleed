@@ -54,6 +54,7 @@ ol#results li {
 
 .vulnerable {
   background-color:#ED5555;
+  color:#eee;
 }
 .vulnerable a {
   color:#eee;
