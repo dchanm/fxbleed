@@ -1,3 +1,5 @@
+console.log("attached historyCheck.js");
+
 self.port.on("checkResult", function(result) {
   console.log("got result for " + result.domain + ": " + result.code);
   var resultLi = document.createElement("li");
