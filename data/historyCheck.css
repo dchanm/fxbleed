@@ -67,7 +67,7 @@ ol#results li {
 }
 
 .wasVulnerable {
-  border:1px solid #777;
+  border-left:7px solid red;
 }
 
 .error {
@@ -84,3 +84,11 @@ span.explanation {
   float:right;
   clear:both;
 }
+
+li.wasVulnerable span.explanation {
+  line-height:1.2em;
+  text-align:right;
+}
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }

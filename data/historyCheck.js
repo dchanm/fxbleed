@@ -15,7 +15,7 @@ self.port.on("checkResult", function(result) {
     case 1:
       if (result.wasVulnerable) {
         resultLi.className = 'notVulnerable wasVulnerable';
-        resultLi.innerHTML += '<span class="explanation">This site was vulnerable, but is now fixed.<br>Consider changing your password!</span>';
+        resultLi.innerHTML += '<span class="explanation">This site was vulnerable, but is now fixed.<br><strong>Consider changing your password!</strong></span><div class="clearfix"></div>';
       } else {
         resultLi.className = 'notVulnerable';
         resultLi.innerHTML += '<span class="explanation">Not vulnerable</span>';
