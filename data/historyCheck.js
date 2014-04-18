@@ -9,27 +9,25 @@ self.port.on("checkResult", function(result) {
   // then open the history scan.
   // TODO: basic templating, should build these from an object
   resultLi.innerHTML = '<a href="https://' + result.domain + '">' + result.domain + '</a>';
+
+  let divId = null;
   switch(result.code) {
     case 0:
-      resultLi.className = 'vulnerable';
-      resultLi.innerHTML += '<span class="explanation">Vulnerable!</span>';
+      divId = "vulnerable";
       break;
     case 1:
       if (result.wasVulnerable) {
-        resultLi.className = 'notVulnerable wasVulnerable';
-        resultLi.innerHTML += '<span class="explanation">This site was vulnerable, but is now fixed.<br><strong>Consider changing your password!</strong></span><div class="clearfix"></div>';
+        divId = "wasVulnerable";
       } else {
-        resultLi.className = 'notVulnerable';
-        resultLi.innerHTML += '<span class="explanation">Not vulnerable</span>';
+        divId = "notVulnerable";
       }
       break;
     case 2:
-      resultLi.className = 'error';
-      resultLi.innerHTML += '<span class="explanation">An error occurred checking this site (<a href="https://filippo.io/Heartbleed/faq.html#wentwrong">learn more</a>)</span>';
+      divId = "error";
       break;
   }
 
-  var resultsList = document.querySelector('ol#results');
+  var resultsList = document.querySelector('div#' + divId + " ol");
   resultsList.appendChild(resultLi);
 });
 

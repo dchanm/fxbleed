@@ -12,8 +12,32 @@
       <h2 class="center">Scan My History</h2>
     </div>
     <div id="info">
-      <ol id="results"></ol>
-      <img src="spin.gif" id="progress" class="center" />
+
+      <img src="progress.gif" id="progress" class="center" />
+
+      <div id="wasVulnerable">
+        <h2>Were vulnerable</h2>
+        <p>These sites were vulnerable to Heartbleed at one time, but are fixed now. <strong>We recommend changing your passwords and keeping an eye on these accounts for suspicious activity.</strong></p>
+        <ol></ol>
+      </div>
+
+      <div id="vulnerable">
+        <h2>Vulnerable</h2>
+        <p>These sites are still vulnerable to Heartbleed! Use caution when accessing these sites, and encourage the site operators to fix this!</p>
+        <ol></ol>
+      </div>
+
+      <div id="notVulnerable">
+        <h2>Not Vulnerable</h2>
+        <p>These sites are not and never were vulnerable to Heartbleed.</p>
+        <ol></ol>
+      </div>
+
+      <div id="error">
+        <h2>Errors</h2>
+        <p>Our Heartbleed check service returned an error for these sites. They are probably safe, but we can't be 100% sure. <a href="https://filippo.io/Heartbleed/faq.html#wentwrong">Learn more.</a></p>
+        <ol></ol>
+      </div>
     </div>
   </body>
 </html>

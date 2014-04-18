@@ -31,6 +31,10 @@ div#header {
   margin-top:1.4em;
 }
 
+img#progress {
+  margin-bottom:1.4em;
+}
+
 div#info {
   width:531px;
   margin: 0 auto;
@@ -39,57 +43,39 @@ div#info {
 img#heartbleed-logo {
   margin-bottom:1.4em;
 }
-img#example-popup {
+
+ol {
   margin-bottom:1.4em;
 }
 
-ol#results {
-  list-style-type:none;
-  margin-bottom:16px;
-}
-
-ol#results li {
+ol li {
   padding:8px;
 }
 
-.vulnerable {
-  background-color:#ED5555;
-  color:#eee;
+div#wasVulnerable ol li {
+  background-color:#BAFF75;
 }
-.vulnerable a {
-  color:#eee;
+div#wasVulnerable ol li a {
+  color:#111;
 }
 
-.notVulnerable {
+div#vulnerable ol li {
+  background-color:#ED5555;
+}
+div#vulnerable ol li a {
+  color:#fff;
+}
+
+div#notVulnerable ol li {
   background-color:#6CED55;
 }
-.notVulnerable a {
-  color:#333;
+div#notVulnerable ol li a {
+  color:#111;
 }
 
-.wasVulnerable {
-  border-left:7px solid red;
-}
-
-.error {
+div#error ol li {
   background-color:yellow;
 }
-.error a {
+div#error ol li a {
   color: black;
 }
-
-span.explanation {
-  font-size:12px;
-  /* Is this the best way to do this? */
-  display:block;
-  float:right;
-  clear:both;
-}
-
-li.wasVulnerable span.explanation {
-  line-height:1.2em;
-  text-align:right;
-}
-
-.clearfix:before, .clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
