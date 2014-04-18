@@ -43,17 +43,31 @@ img#example-popup {
   margin-bottom:1.4em;
 }
 
+ol#results {
+  list-style-type:none;
+}
+
+ol#results li {
+  padding:4px;
+}
+
 .vulnerable {
   background-color:#ED5555;
+}
+.vulnerable a {
   color:#eee;
 }
 
 .notVulnerable {
   background-color:#6CED55;
+}
+.notVulnerable a {
   color:#333;
 }
 
 .error {
   background-color:yellow;
+}
+.error a {
   color: black;
 }
