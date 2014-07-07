@@ -1,8 +1,14 @@
 Based off Jamie Hoyle's ChromeBleed extension
 https://chrome.google.com/webstore/detail/chromebleed/eeoekjnjgppnaegdjbcafdggilajhpic
 
-The extension uses a Mozilla-operated instance of Filippo Valsora's endpoint
-from http://filippo.io/Heartbleed/
+<strike>The extension uses a Mozilla-operated instance of Filippo Valsora's endpoint
+from http://filippo.io/Heartbleed/</strike>
+
+Due to abuse reports from our endpoint hosting provider, which have switched to
+the non-invasive "local probe" method. Our testing showed that this was
+equivalent to the results from Valdora's endpoint. It also has the benefit of
+being non-invasive, because it uses passive fingerprinting to target the fixed
+versions of OpenSSL (instead of trying to perform the Heartbleed attack).
 
 ## Try it out
 
