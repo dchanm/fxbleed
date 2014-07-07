@@ -26,15 +26,20 @@ self.port.on("siteStatus", function(status) {
     headerDiv.className = "";
   }
 
+  // from FXBleed.js, bleh
+  const SITE_SAFE = 1;
+  const SITE_VULN = 2;
+  const SITE_ERR  = 3;
+
   var statusP = document.querySelector('div#header p#status');
   if (status.response === undefined) {
     statusP.innerHTML = '<img src="progress.gif" />';
     headerDiv.className = "unknown";
-  } else if (status.response.error === true) {
+  } else if (status.response === SITE_ERR) {
     statusP.innerHTML = '<p>An error occurred.</p><p class="small">This does not mean the site is vulnerable. For more information, <a target="_blank" href="https://filippo.io/Heartbleed/faq.html#wentwrong">click here</a></p>';
     headerDiv.className = 'error';
   } else {
-    if (status.response.vulnerable === true) {
+    if (status.response === SITE_VULN) {
       statusP.textContent = "Vulnerable!";
       headerDiv.className = "vulnerable";
     } else {
