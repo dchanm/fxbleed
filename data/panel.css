@@ -1,0 +1,68 @@
+/* CSS reset */
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  font: 16px Arial, sans-serif;
+  background-color:#ddd;;
+}
+
+.center { text-align: center; }
+img.center, button.center { display: block; margin: 0 auto; }
+
+div#header {
+  text-align:center;
+  padding-bottom:4px;
+}
+
+div#historyScan {
+  margin-top: 8px;
+}
+
+.hidden {
+  display:none;
+}
+
+div#header p {
+  padding:4px 8px;
+}
+
+div#header p.small {
+  font-size:10px;
+}
+
+.vulnerable {
+  background-color:#ED5555;
+  color:#eee;
+}
+
+.notVulnerable {
+  background-color:#6CED55;
+  color:#333;
+}
+
+.unknown {
+  background-color:white;
+  color: black;
+}
+
+.error {
+  background-color:yellow;
+  color: black;
+}
+
+div#settings {
+  padding:8px;
+}
+
+div#settings h1 {
+  text-align:center;
+  font-size:11px;
+  margin-bottom:8px;
+}
+
+div#settings label {
+  font: 13px Arial,sans-serif;
+}

@@ -1,0 +1,81 @@
+/* Reset browser styles */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 1.4em;
+  color: #333;
+  background-color:#eee;
+}
+
+.center { text-align: center; }
+img.center { display: block; margin: 0 auto; }
+
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom:1.4em;
+}
+
+p {
+  margin-bottom:1.4em;
+}
+
+a {
+  color:#4586FE;
+}
+
+div#header {
+  margin-top:1.4em;
+}
+
+img#progress {
+  margin-bottom:1.4em;
+}
+
+div#info {
+  width:531px;
+  margin: 0 auto;
+}
+
+img#heartbleed-logo {
+  margin-bottom:1.4em;
+}
+
+ol {
+  margin-bottom:1.4em;
+}
+
+ol li {
+  padding:8px;
+}
+
+div#wasVulnerable ol li {
+  background-color:#BAFF75;
+}
+div#wasVulnerable ol li a {
+  color:#111;
+}
+
+div#vulnerable ol li {
+  background-color:#ED5555;
+}
+div#vulnerable ol li a {
+  color:#fff;
+}
+
+div#notVulnerable ol li {
+  background-color:#6CED55;
+}
+div#notVulnerable ol li a {
+  color:#111;
+}
+
+div#error ol li {
+  background-color:yellow;
+}
+div#error ol li a {
+  color: black;
+}

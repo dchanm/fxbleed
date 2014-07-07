@@ -1,16 +1,17 @@
 {
-  "name": "fxbleed",
-  "title": "fxbleed",
+  "name": "heartbleed_monitor",
+  "title": "Heartbleed Monitor",
   "id": "jid1-eMhaOaq3SPBFDg",
   "description": "A Firefox add-on to notify you when you visit a webpage vulnerable to Heartbleed",
-  "author": "David Chan <dchan@mozilla.com>",
+  "author": "David Chan <dchan@mozilla.com> and Garrett Robinson <grobinson@mozilla.com>",
   "license": "MPL 2.0",
-  "version": "0.1",
+  "version": "0.2",
   "preferences": [{
     "name": "enabled",
-    "title": "Toggle FXBleed",
-    "description": "Toggle FXBleed",
+    "title": "Toggle Heartbleed Monitor",
+    "description": "Toggle Heartbleed Monitor",
     "type": "bool",
     "value": false
-  }]
+  }],
+  "permissions": {"private-browsing": true}
 }

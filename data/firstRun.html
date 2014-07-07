@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Heartbleed Monitor</title>
+    <link rel="stylesheet" type="text/css" href="OpenSans.css" />
+    <link rel="stylesheet" type="text/css" href="firstRun.css" />
+  </head>
+  <body>
+    <div id="header">
+      <img src="heartbleed-64.png" class="center" id="heartbleed-logo" />
+      <h2 class="center">Thanks for installing Heartbleed Monitor!</h2>
+    </div>
+    <div id="info">
+      <p>Heartbleed Monitor automatically checks the sites you visit to see if they're vulnerable to <a href="http://heartbleed.com/">Heartbleed (CVE-2014-0160)</a>. If they are, you will get a pop-up notification like this:</p>
+      <img src="example-popup.png" class="center" id="example-popup" />
+      <p>Click the Heartbleed Monitor icon <img src="heartbleed-16.png" id="heartbleed-icon" /> in the Add-on Bar at any time to check the status of the site you're currently on. This panel is also where you can change the addon's settings:
+        <ul>
+          <li><em>Enable Heartbleed Notifications</em>: Enable/disable the popup notifications on vulnerable sites. Default: on.</li>
+        </ul>
+      </p>
+      <p>Since Heartbleed can be used to steal sensitive material from the servers of sites you visit, including your passwords, you should reset your passwords once the sites you use have been patched. Heartbleed Monitor can help you with this by scanning your recent history and producing a list of sites you've visited that were vulnerable, but have since been patched.</p>
+      <button id="startHistoryScan" class="center">Scan My History</button>
+    </div>
+  </body>
+</html>
